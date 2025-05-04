@@ -28,7 +28,7 @@ interface Procedure {
   progress: number;
   description: string;
   type: string;
-  icon: any;
+  icon: import('@fortawesome/fontawesome-svg-core').IconDefinition;
   steps: {
     name: string;
     status: 'completed' | 'in-progress' | 'pending';

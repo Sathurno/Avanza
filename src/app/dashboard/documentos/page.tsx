@@ -131,7 +131,7 @@ const DocumentsPage = () => {
                               : doc.status === 'in-review'
                               ? 'En revisión'
                               : 'Pendiente'}
-                            {doc.size && ` · ${doc.size}`}
+                            {'size' in doc && ` · ${doc.size}`}
                           </p>
                         </div>
                         <div className="flex space-x-2">

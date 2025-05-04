@@ -65,7 +65,7 @@ const NotificationsPage = () => {
       
   const unreadCount = notifications.filter(n => !n.isRead).length;
   
-  const getTypeStyles = (type) => {
+  const getTypeStyles = (type: string) => {
     switch(type) {
       case 'info':
         return { icon: faInfoCircle, bgColor: 'bg-blue-50', borderColor: 'border-blue-500', iconColor: 'text-blue-500' };

@@ -26,7 +26,7 @@ interface Payment {
   dueDate?: string;
   invoiceLink?: string;
   paymentMethod?: string;
-  icon: any; // Using any to simplify
+  icon: import('@fortawesome/fontawesome-svg-core').IconDefinition;
 }
 
 const PaymentsPage = () => {
