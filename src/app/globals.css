@@ -339,6 +339,43 @@ button, .button {
   20%, 40%, 60%, 80% { transform: translateX(5px); }
 }
 
+/* Dashboard Styles */
+.sidebar-item.active {
+  background-color: #f3f4f6;
+  border-left: 3px solid #3b82f6;
+  color: #1e40af;
+}
+
+.sidebar-item:hover:not(.active) {
+  background-color: #f3f4f6;
+}
+
+.status-badge {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.progress-track {
+  height: 6px;
+  background-color: #e5e7eb;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #3b82f6;
+  transition: width 0.5s ease;
+}
+
+.document-card {
+  transition: all 0.2s ease;
+}
+
+.document-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
 /* Utility Classes */
 .text-center {
   text-align: center;

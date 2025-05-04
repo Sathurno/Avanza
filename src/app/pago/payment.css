@@ -1,0 +1,98 @@
+/* Payment process custom styles */
+
+.payment-step {
+  position: relative;
+}
+
+.payment-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  height: 20px;
+  width: 2px;
+  background-color: #1e40af;
+}
+
+.payment-step.completed .step-number {
+  background-color: #10b981;
+  border-color: #10b981;
+  color: white;
+}
+
+.payment-step.active .step-number {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+  color: white;
+}
+
+/* FAQ Accordion styles */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.faq-toggle.active i {
+  transform: rotate(180deg);
+}
+
+/* Form styles */
+input:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+input:invalid, select:invalid {
+  border-color: #ef4444;
+}
+
+/* Button hover effects */
+.service-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* PayPal button container */
+#paypal-button-container {
+  min-height: 60px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .payment-step:not(:last-child)::after {
+    left: 50%;
+    bottom: -15px;
+    height: 15px;
+  }
+  
+  .step-number {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .payment-step:not(:last-child)::after {
+    display: none;
+  }
+  
+  .bg-blue-50, .bg-yellow-50, .bg-green-50 {
+    background-color: white !important;
+    border: 1px solid #e5e7eb !important;
+  }
+  
+  .bg-blue-900, .bg-gray-100 {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .text-white {
+    color: black !important;
+  }
+} 

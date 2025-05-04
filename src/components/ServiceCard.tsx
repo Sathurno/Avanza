@@ -1,5 +1,6 @@
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import PaymentsIcon from '@mui/icons-material/Payments';
+import Link from 'next/link';
 
 interface Feature {
   text: string;
@@ -26,6 +27,14 @@ const ServiceCard = ({
   headerBgColor = 'bg-[var(--color-primary)]',
   textColor = 'text-white'
 }: ServiceCardProps) => {
+  // Determine service id from title for the URL parameter
+  const getServiceId = () => {
+    if (title.includes('Homologación')) return 'homologacion';
+    if (title.includes('Visa')) return 'visa';
+    if (title.includes('Convalidación')) return 'convalidacion';
+    return 'homologacion'; // default
+  };
+
   return (
     <div 
       className={`service-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 transition duration-300 ${
@@ -51,10 +60,10 @@ const ServiceCard = ({
             </li>
           ))}
         </ul>
-        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition duration-300 flex items-center justify-center">
+        <Link href={`/pago?service=${getServiceId()}`} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition duration-300 flex items-center justify-center">
           <PaymentsIcon className="mr-2" fontSize="small" />
           Pagar con PayPal
-        </button>
+        </Link>
       </div>
     </div>
   );

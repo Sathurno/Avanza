@@ -10,8 +10,10 @@ import {
   faArrowRight, 
   faCircleNotch, 
   faBalanceScale,
-  faTimes
+  faTimes,
+  faTools
 } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 interface LoginModalProps {
   isOpen: boolean;
@@ -188,6 +190,14 @@ const LoginModal = ({ isOpen, onClose }: LoginModalProps) => {
         <div className="border-t border-gray-200 pt-3 pb-4 px-8">
           <div className="text-center text-sm">
             <p className="text-gray-600">¿No tiene acceso? <a href="#" className="text-blue-600 hover:text-blue-800">Solicite sus credenciales</a></p>
+          </div>
+          
+          {/* Development button to access dashboard without login */}
+          <div className="mt-3 text-center">
+            <Link href="/dashboard" className="inline-flex items-center text-xs text-gray-500 hover:text-gray-700 border border-gray-300 rounded-md px-2 py-1">
+              <FontAwesomeIcon icon={faTools} className="mr-1" />
+              <span>Acceso Desarrollo</span>
+            </Link>
           </div>
         </div>
         
