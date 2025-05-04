@@ -30,7 +30,7 @@ const Footer = () => {
     { href: '#conocenos', id: 'conocenos', text: 'Conócenos' },
     { href: '#contacto', id: 'contacto', text: 'Contacto' },
     { href: '#especializaciones', id: 'especializaciones', text: 'Especializaciones' },
-    { href: '#visa', id: 'visa', text: 'Visa de estudios' }
+    { href: '#testimonios', id: 'testimonios', text: 'Testimonios' }
   ];
 
   return (
@@ -121,13 +121,13 @@ const Footer = () => {
             © {currentYear} Homologacion/es. Todos los derechos reservados.
           </p>
           <div className="flex space-x-6">
-            <Link href="#" className="text-blue-200 hover:text-white text-sm transition">
+            <Link href="/politica-privacidad" className="text-blue-200 hover:text-white text-sm transition">
               Política de privacidad
             </Link>
-            <Link href="#" className="text-blue-200 hover:text-white text-sm transition">
+            <Link href="/terminos-condiciones" className="text-blue-200 hover:text-white text-sm transition">
               Términos y condiciones
             </Link>
-            <Link href="#" className="text-blue-200 hover:text-white text-sm transition">
+            <Link href="/aviso-legal" className="text-blue-200 hover:text-white text-sm transition">
               Aviso legal
             </Link>
           </div>

@@ -64,7 +64,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section id="testimonios" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-[var(--color-primary)] mb-12">
           Testimonios de nuestros clientes

@@ -58,21 +58,22 @@ const Header = () => {
           </div>
           
           {/* Desktop Menu */}
-          <nav className="hidden md:flex items-center mx-8 flex-1 justify-center">
-            <div className="flex space-x-10">
-              <a href="#servicios" onClick={(e) => handleNavClick(e, 'servicios')} className="nav-link py-1" data-section="servicios">Servicios</a>
-              <a href="#especializaciones" onClick={(e) => handleNavClick(e, 'especializaciones')} className="nav-link py-1" data-section="especializaciones">Especializaciones</a>
-              <a href="#faq" onClick={(e) => handleNavClick(e, 'faq')} className="nav-link py-1" data-section="faq">FAQ</a>
-              <a href="#conocenos" onClick={(e) => handleNavClick(e, 'conocenos')} className="nav-link py-1" data-section="conocenos">Conócenos</a>
-              <a href="#contacto" onClick={(e) => handleNavClick(e, 'contacto')} className="nav-link py-1" data-section="contacto">Contacto</a>
-              <a href="#visa" onClick={(e) => handleNavClick(e, 'visa')} className="nav-link py-1" data-section="visa">Visa de Estudios</a>
+          <nav className="hidden md:flex items-center mx-4 flex-1 justify-center">
+            <div className="flex space-x-6 items-center">
+              <a href="#conocenos" onClick={(e) => handleNavClick(e, 'conocenos')} className="nav-link py-2 whitespace-nowrap" data-section="conocenos">Conócenos</a>
+              <a href="#especializaciones" onClick={(e) => handleNavClick(e, 'especializaciones')} className="nav-link py-2 whitespace-nowrap" data-section="especializaciones">Especializaciones</a>
+              <a href="#servicios" onClick={(e) => handleNavClick(e, 'servicios')} className="nav-link py-2 whitespace-nowrap" data-section="servicios">Servicios</a>
+              <a href="#visa" onClick={(e) => handleNavClick(e, 'visa')} className="nav-link py-2 whitespace-nowrap" data-section="visa">Visa</a>
+              <a href="#testimonios" onClick={(e) => handleNavClick(e, 'testimonios')} className="nav-link py-2 whitespace-nowrap" data-section="testimonios">Testimonios</a>
+              <a href="#faq" onClick={(e) => handleNavClick(e, 'faq')} className="nav-link py-2 whitespace-nowrap" data-section="faq">FAQ</a>
+              <a href="#contacto" onClick={(e) => handleNavClick(e, 'contacto')} className="nav-link py-2 whitespace-nowrap" data-section="contacto">Contacto</a>
             </div>
           </nav>
           
           <div className="hidden md:block">
             <button 
               onClick={openLoginModal}
-              className="bg-blue-700 px-5 py-2 rounded-md hover:bg-blue-600 transition duration-300 flex items-center text-sm font-medium"
+              className="bg-blue-700 px-5 py-2 rounded-md hover:bg-blue-600 transition duration-300 flex items-center text-sm font-medium whitespace-nowrap"
             >
               <PersonIcon className="mr-2" fontSize="small" />
               Mi Cuenta
@@ -82,12 +83,13 @@ const Header = () => {
         
         {/* Mobile Menu */}
         <div className={`md:hidden bg-blue-900 pb-4 px-4 ${isMenuOpen ? 'block' : 'hidden'}`}>
-          <a href="#servicios" onClick={(e) => handleNavClick(e, 'servicios')} className="block py-2 border-b border-blue-800">Servicios</a>
-          <a href="#especializaciones" onClick={(e) => handleNavClick(e, 'especializaciones')} className="block py-2 border-b border-blue-800">Especializaciones</a>
-          <a href="#faq" onClick={(e) => handleNavClick(e, 'faq')} className="block py-2 border-b border-blue-800">FAQ</a>
           <a href="#conocenos" onClick={(e) => handleNavClick(e, 'conocenos')} className="block py-2 border-b border-blue-800">Conócenos</a>
+          <a href="#especializaciones" onClick={(e) => handleNavClick(e, 'especializaciones')} className="block py-2 border-b border-blue-800">Especializaciones</a>
+          <a href="#servicios" onClick={(e) => handleNavClick(e, 'servicios')} className="block py-2 border-b border-blue-800">Servicios</a>
+          <a href="#visa" onClick={(e) => handleNavClick(e, 'visa')} className="block py-2 border-b border-blue-800">Visa</a>
+          <a href="#testimonios" onClick={(e) => handleNavClick(e, 'testimonios')} className="block py-2 border-b border-blue-800">Testimonios</a>
+          <a href="#faq" onClick={(e) => handleNavClick(e, 'faq')} className="block py-2 border-b border-blue-800">FAQ</a>
           <a href="#contacto" onClick={(e) => handleNavClick(e, 'contacto')} className="block py-2 border-b border-blue-800">Contacto</a>
-          <a href="#visa" onClick={(e) => handleNavClick(e, 'visa')} className="block py-2 border-b border-blue-800">Visa de Estudios</a>
           <button 
             onClick={openLoginModal} 
             className="block w-full py-2 bg-blue-700 text-center rounded-md mt-2"
